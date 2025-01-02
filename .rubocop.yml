@@ -55,3 +55,6 @@ Style/DocumentationMethod:
 Style/Documentation:
   Exclude:
     - "test/**/*_test.rb"
+
+YARD/MismatchName:
+  EnforcedStylePrototypeName: before

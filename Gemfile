@@ -5,7 +5,11 @@ source "https://rubygems.org"
 # Used for accessing the APIs, translating responses, etc
 gem "mastodon-api", require: "mastodon", github: "tootsuite/mastodon-api", branch: "master"
 
+gem "httparty"
+
 group :development, :test do
+  gem "dotenv" # Used to load environment variables from .env files
+
   gem "debug"
 
   # Code formatting and hooks
