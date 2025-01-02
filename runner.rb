@@ -67,6 +67,6 @@ toot.media_attachments.each do |media|
   media_ids << upload_media(mc, media, file)
 end
 
-opts = { media_ids: }
+opts = { media_ids:, visibility: :unlisted }
 opts[:headers] = { "Idempotency-Key" => idempotency_key }
 mc.create_status(text, opts)
