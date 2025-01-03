@@ -62,4 +62,7 @@ md5sums.each_cons(2) do |a, b|
   break unless checksum_a == checksum_b
 
   mc.destroy_status(id_a)
+rescue Mastodon::Error::TooManyRequests
+  sleep 30
+  retry
 end
