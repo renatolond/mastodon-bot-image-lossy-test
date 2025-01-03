@@ -5,6 +5,8 @@ source "https://rubygems.org"
 # Used for accessing the APIs, translating responses, etc
 gem "mastodon-api", require: "mastodon", github: "tootsuite/mastodon-api", branch: "master"
 
+gem "base64" # Needed because of some gems and Ruby 3.4.x, should be removed later
+
 gem "httparty"
 
 group :development, :test do
